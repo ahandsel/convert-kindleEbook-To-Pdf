@@ -34,13 +34,15 @@ convert image1.jpg image2.png output.pdf
 #### Automate taking pics using screenshot and mouse click using bash
 ```bash
 #!/bin/bash
-sleep 5
+echo "Get Ready!"
+var = 0
+sleep 10
 while :
 do
 echo “Press [CTRL+C] to stop..”
 ((var=var+1))
 sleep 0.05
-scrot $var.png
+screencapture $var.png
 xdotool click 1
 done
 ```
